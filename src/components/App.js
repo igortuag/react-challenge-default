@@ -3,6 +3,7 @@ import "./App.css";
 import CountriesList from "./CountriesList";
 import Country from "./Country";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -11,7 +12,9 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <header className="App-header">
-              <h1 className="App-title">Countries Of The World</h1>
+              <Link to="/">
+                <h1 className="App-title">Countries Of The World</h1>
+              </Link>
             </header>
 
             <main className="AppBody">
