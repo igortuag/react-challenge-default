@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import CountriesList from "./CountriesList";
 import Country from "./Country";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Home from "./Home";
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
 
             <main className="AppBody">
               <Switch>
-                <Route exact path="/" component={CountriesList} />
+                <Route exact path="/" component={Home} />
                 <Route path="/country/:name" component={Country} />
               </Switch>
             </main>
