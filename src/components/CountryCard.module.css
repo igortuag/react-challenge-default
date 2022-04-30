@@ -1,0 +1,43 @@
+.card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+.flag {
+  padding: 0.5rem;
+}
+
+.flag img {
+  width: fit-content;
+  height: 180px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.attribute {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.attribute span {
+  font-weight: bold;
+}

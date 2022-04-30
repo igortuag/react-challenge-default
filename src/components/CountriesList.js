@@ -4,6 +4,8 @@ import Error from "./helper/Error";
 import Loading from "./helper/Loading";
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
+import CountryCard from "./CountryCard";
+import styles from "./CountriesList.module.css";
 
 function CountriesList() {
   const { data, loading, error, request } = useFetch();
@@ -23,11 +25,11 @@ function CountriesList() {
 
   if (data)
     return (
-      <ul>
+      <ul className={styles.list}>
         {data.map((country) => (
           <li>
             <Link to={`/country/${country.name.common}`}>
-              {country.name.common}
+              <CountryCard country={country} />
             </Link>
           </li>
         ))}
