@@ -43,7 +43,7 @@ function CountriesList() {
 
             if (!search || country.name.common.match(regexToSearch)) {
               return (
-                <li>
+                <li key={country.name.common}>
                   <Link to={`/country/${country.name.common}`}>
                     <CountryCard country={country} />
                   </Link>

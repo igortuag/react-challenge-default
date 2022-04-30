@@ -14,7 +14,6 @@ const Loading = () => {
           width="40px"
           height="40px"
           viewBox="0 0 40 40"
-          enable-background="new 0 0 40 40"
         >
           <path
             opacity="0.2"
