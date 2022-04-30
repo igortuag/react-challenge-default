@@ -14,7 +14,7 @@ function CountryCard({ country }) {
       <div className={styles.info}>
         <p className={styles.name}>{country.name.common}</p>
         <p className={styles.attribute}>
-          <span>Native Name:</span> {country.name.common}
+          <span>Capital:</span> {country.capital}
         </p>
         <p className={styles.attribute}>
           <span>Population:</span> {country.population}

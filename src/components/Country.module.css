@@ -1,0 +1,24 @@
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.flag {
+  margin: 1.25rem 0;
+}
+
+.flag img {
+  border: 1px solid #ddd;
+}
+
+.attribute {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.attribute span {
+  font-weight: bold;
+}

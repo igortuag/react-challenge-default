@@ -3,7 +3,7 @@ import CountriesList from "./CountriesList";
 
 const Home = () => {
   return (
-    <section className="container mainContainer">
+    <section className="container animeLeft">
       <CountriesList />
     </section>
   );
