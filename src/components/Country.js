@@ -2,6 +2,7 @@ import React from "react";
 import { COUNTRY_GET } from "../api";
 import Error from "./helper/Error";
 import Loading from "./helper/Loading";
+import Image from "./helper/Image";
 import useFetch from "../hooks/useFetch";
 import { useMemo } from "react";
 import styles from "./Country.module.css";
@@ -36,7 +37,7 @@ function Country({ match }) {
           <p className={styles.attribute}>
             <span>Flag:</span>
           </p>
-          <img
+          <Image
             src={country.flags.png}
             alt={`Flag of the country ${country.name.common}`}
           />

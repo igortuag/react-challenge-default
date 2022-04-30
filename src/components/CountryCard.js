@@ -1,12 +1,13 @@
 import React from "react";
 
 import styles from "./CountryCard.module.css";
+import Image from "./helper/Image";
 
 function CountryCard({ country }) {
   return (
     <div className={styles.card}>
       <div className={styles.flag}>
-        <img
+        <Image
           src={country.flags.png}
           alt={`Flag of the country ${country.name.common}`}
         />
