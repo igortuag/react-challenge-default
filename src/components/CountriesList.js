@@ -9,6 +9,7 @@ import styles from "./CountriesList.module.css";
 
 function CountriesList() {
   const { data, loading, error, request } = useFetch();
+  const [search, setSearch] = React.useState("");
 
   React.useEffect(() => {
     async function fetchCountries() {
@@ -25,15 +26,35 @@ function CountriesList() {
 
   if (data)
     return (
-      <ul className={styles.list}>
-        {data.map((country) => (
-          <li>
-            <Link to={`/country/${country.name.common}`}>
-              <CountryCard country={country} />
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div>
+        <label className={styles.search}>
+          <input
+            placeholder="SEARCH BY COUNTRY NAME"
+            type="text"
+            value={search}
+            onChange={({ target }) => {
+              setSearch(target.value);
+            }}
+          />
+        </label>
+        <ul className={styles.list}>
+          {data.map((country) => {
+            const regexToSearch = new RegExp(search, "gi");
+
+            if (!search || country.name.common.match(regexToSearch)) {
+              return (
+                <li>
+                  <Link to={`/country/${country.name.common}`}>
+                    <CountryCard country={country} />
+                  </Link>
+                </li>
+              );
+            }
+
+            return null;
+          })}
+        </ul>
+      </div>
     );
 
   return null;
